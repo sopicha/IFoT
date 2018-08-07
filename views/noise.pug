@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    div(class="container-fluid")
+        div(class="row-fluid")
+
+            div(class="col-lg-12")
+                object(id="ubimap", data="/images/ubi-map.svg" type="image/svg+xml")
+
+block script
+    //console.info('in script')
+    script(src='/javascripts/init.js')
+    script(src='/javascripts/noise.js')
+
+
+

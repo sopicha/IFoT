@@ -1,0 +1,79 @@
+{
+  "_from": "influxdb-nodejs",
+  "_id": "influxdb-nodejs@2.8.0",
+  "_inBundle": false,
+  "_integrity": "sha512-rP5d3/FJKpGgAAHtQSG3ZzkVuTAJLgBJCHhI0MWGUxRwXUeCyQnZmEOSVb1ky4fnn6iUA6nmhKhXYF1BH9Ocjg==",
+  "_location": "/influxdb-nodejs",
+  "_phantomChildren": {
+    "ms": "2.0.0"
+  },
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "influxdb-nodejs",
+    "name": "influxdb-nodejs",
+    "escapedName": "influxdb-nodejs",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/influxdb-nodejs/-/influxdb-nodejs-2.8.0.tgz",
+  "_shasum": "695b1f341e0463c5d02d1e21b3a22e1f86724ab4",
+  "_spec": "influxdb-nodejs",
+  "_where": "/Users/yoonnie/WebstormProjects/IFoT",
+  "author": {
+    "name": "Tree Xie",
+    "email": "vicansocanbico@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/vicanso/influxdb-nodejs/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "debug": "^3.1.0",
+    "influx-ql": "^2.7.0",
+    "lodash": "^4.17.10",
+    "nano-seconds": "^1.2.2",
+    "superagent": "^3.8.3",
+    "superagent-load-balancer": "^2.0.3"
+  },
+  "deprecated": false,
+  "description": "node.js influxdb client",
+  "devDependencies": {
+    "docdash": "^0.4.0",
+    "eslint": "^3.12.2",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.8.0",
+    "istanbul": "^0.4.5",
+    "jsdoc": "^3.4.3",
+    "mocha": "^3.1.0"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "homepage": "https://github.com/vicanso/influxdb-nodejs#readme",
+  "keywords": [
+    "influx",
+    "influxdb",
+    "series",
+    "stats"
+  ],
+  "license": "MIT",
+  "name": "influxdb-nodejs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vicanso/influxdb-nodejs.git"
+  },
+  "scripts": {
+    "generate-docs": "node ./node_modules/.bin/jsdoc -c jsdoc.json --readme ./api.md",
+    "size": "t=\"$(npm pack .)\"; wc -c \"${t}\"; tar tvf \"${t}\"; rm \"${t}\";",
+    "test": "node ./node_modules/.bin/eslint ./lib/*.js && node ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha ./test/*.js --"
+  },
+  "version": "2.8.0"
+}

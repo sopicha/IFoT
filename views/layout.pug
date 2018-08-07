@@ -1,0 +1,42 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootswatch/4.1.2/minty/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+
+
+  body
+
+      script(src="https://d3js.org/d3.v4.min.js")
+      script(src="/lib/influxdb-nodejs")
+
+      div(id="wrapper").container-fluid
+          //navigation bar
+          ul.nav.nav-pills
+              li.nav-item
+                  a.nav-link.active(href='/') Home
+
+              li.nav-item.dropdown
+                  a.nav-link.dropdown-toggle(data-toggle='dropdown' href='#' role='button' aria-haspopup='true' aria-expanded='false') Language
+                  .dropdown-menu
+                      a.dropdown-item(href='#') English
+                      a.dropdown-item(href='#') Japanese
+
+      div(id="page-wrapper").container-fluid.row
+
+          div.col-md-2.list-group
+              a.list-group-item.list-group-item-action(href='/noise')
+                  | Noise
+              a.list-group-item.list-group-item-action(href='#')
+                  | Light
+              a.list-group-item.list-group-item-action(href='#')
+                  | Temperature
+
+          div.container
+              block content
+
+      script(src="/lib/bootstrap/bootstrap.min.js")
+      script(src="/lib/jquery/jquery.min.js")
+
+      block script
