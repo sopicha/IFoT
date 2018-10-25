@@ -1,4 +1,7 @@
+'use strict';
+
 window.onload = function () {
+
 
     // add ubi-lab map as an object
 
@@ -9,7 +12,6 @@ window.onload = function () {
 
     var point = svg.append("g")
         .attr("id", "sensor_location");
-
     d3.json("/sensor/sensor_location.json", function(error, json) {
         if (error) throw error;
         //console.info('before draw circle');
@@ -22,11 +24,13 @@ window.onload = function () {
             .attr("id", function(d) { return "S"+d.id; })
             .attr("r", "30")
             .attr("fill", "red")
-            .attr("opacity", 0.2)
+            .attr("opacity", 0)
             .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+
+        console.info(point);
 
     });
 
-
-
 };
+
+
